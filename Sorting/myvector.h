@@ -21,11 +21,11 @@
 
 using namespace std::chrono;
 
-// #include"intercalacion.h"
 #include"bubbleSort.h"
+#include"insertSort.h"
 
- using HRC = high_resolution_clock::time_point;
- using  MS = std::chrono::microseconds;
+ // using HRC = high_resolution_clock::time_point;
+ // using  MS = std::chrono::microseconds;
 
  // using L = int;
 
@@ -58,18 +58,12 @@ public:
         los atributos asInsertSortAndMergeSortignaciones y comparaciones son pasados por referencia para saber la
         cantidad de comparaciones y asignaciones.
     */
-    void insertSort(long &asignaciones, long &comparaciones){
-        long i = 1,j;
-        while( i < lengthVector){
-            comparaciones++;
-            j=i;asignaciones++;
-            while(j > 0 && myvector[j-1] > myvector[j]){
-                comparaciones++;
-                std::swap(myvector[j],myvector[j-1]);
-                j = j-1; asignaciones++;
-            }
-            i = i+1; asignaciones++;
-        }
+    auto insertSortF(){
+        auto start = high_resolution_clock::now();
+        insertSort(myvector,lengthVector);
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        return duration;
     }
 
 

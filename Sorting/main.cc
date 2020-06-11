@@ -16,31 +16,29 @@ int main(){
     //vec.printVector();
 
 
-    /*
-        APLICADO EL ALGORITMO INSERTSORT LO ORDENA DE MENOR A MAYOR
-    */
-
-    /*long asig = 0, comp= 0;
-    vec.insertSort(asig,comp);*/
-
-    /*
-        IMPRIME EL VECTOR YA ORDENADO CON EL INSERT SORT
-    */
-    //vec.printVector();
-    /*std::cout << "TAMANHIO VECTOR: " << vec.getLength() << std::endl;
-    std::cout << "ASIGNACIONES: " << asig << "\n COMPARACIONES " << comp << std::endl;*/
-
-
-
 
 
 
 
     /*
-        MERGE SORT
+        INSERT SORT
     */
-    //vec.testing();
-
+    // std::ofstream dataInsertSort;
+    // dataInsertSort.open("dataInsertSort.txt",std::ios::app);
+    // for(auto n = 2; n < 33000 ; n *=2 ){
+    //     auto promedioX = 0;
+    //     //SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
+    //     for (int e = 0 ; e < 50 ; e++){
+    //         MyVector<int> vec(n);
+    //         auto duration = vec.insertSortF();
+    //         promedioX  += duration.count();
+    //         std::cout << promedioX << std::endl;
+    //     }
+    //     promedioX /=50;
+    //     dataInsertSort << n << " " << promedioX << std::endl;
+    //
+    // }
+    // dataInsertSort.close();
 
 
 
@@ -73,10 +71,20 @@ int main(){
     //
     // }
     // dataBubbleSort.close();
+    //#
+    //#
+    //#
+    //#
+    //#
+    // testing bubble sort with n = 32768
+    // MyVector<int> v(32768);
+    // auto duration = v.bubbleSortF();
+    // std::cout << duration.count() << std::endl;
 
-    MyVector<int> v(32768);
-    auto duration = v.bubbleSortF();
-    std::cout << duration.count() << std::endl;
+    //testing insertSort with n = 8192
+    // MyVector<int> v(8192);
+    // auto duration = v.insertSortF();
+    // std::cout << duration.count() << std::endl;
 
 
 
