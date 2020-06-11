@@ -14,8 +14,20 @@
 */
 
 #include<iostream>
+#include<fstream>
+#include<chrono>
 #include<vector>    //vector
 #include <algorithm>    // std::swap
+
+using namespace std::chrono;
+
+// #include"intercalacion.h"
+#include"bubbleSort.h"
+
+ using HRC = high_resolution_clock::time_point;
+ using  MS = std::chrono::microseconds;
+
+ // using L = int;
 
 template<typename T>
 class MyVector{
@@ -28,7 +40,7 @@ public:
         T num;
         srand(time(NULL));
         for(auto e = 0 ; e< lengthVector; e++){
-            num = 0 + rand()%(10000-0);
+            num = 0 + rand()%(50000-0); // numeros aleatorios entre 0 y 50 000
             myvector.push_back(num);
         }
     }
@@ -43,7 +55,7 @@ public:
 
 
     /*
-        los atributos asignaciones y comparaciones son pasados por referencia para saber la
+        los atributos asInsertSortAndMergeSortignaciones y comparaciones son pasados por referencia para saber la
         cantidad de comparaciones y asignaciones.
     */
     void insertSort(long &asignaciones, long &comparaciones){
@@ -59,6 +71,22 @@ public:
             i = i+1; asignaciones++;
         }
     }
+
+
+
+
+
+    auto bubbleSortF(){
+        auto start = high_resolution_clock::now();
+        bubbleSort(myvector,lengthVector);
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        // std::cout << "Time taken by function: "
+        // << duration.count() << " microseconds" << std::endl;
+
+        return duration;
+    }
+
 
 };
 
