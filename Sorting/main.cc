@@ -90,5 +90,32 @@ int main(){
 
     // std::cout << INT_MAX << std::endl;
     // std::cout << LONG_MAX << std::endl;
+
+
+
+    //TEST INTERCALACION
+    // std::vector<int> v;
+    // v.push_back(80);
+    // v.push_back(100);
+    // v.push_back(110);
+    // v.push_back(2);
+    // v.push_back(90);
+    // v.push_back(105);
+    // intercalacion(v,0,2,5);
+    // for(auto it = v.begin() ; it != v.end(); it++){
+    //     std::cout << *it << " ";
+    // }std::cout << std::endl;
+
+
+
+
+    /*
+        MERGE SORT
+    */
+    MyVector<int> vec(5);
+    vec.mergeSortF();
+
+
+
     return 0;
 }

@@ -23,6 +23,7 @@ using namespace std::chrono;
 
 #include"bubbleSort.h"
 #include"insertSort.h"
+#include"mergeSort.h"
 
  // using HRC = high_resolution_clock::time_point;
  // using  MS = std::chrono::microseconds;
@@ -79,6 +80,10 @@ public:
         // << duration.count() << " microseconds" << std::endl;
 
         return duration;
+    }
+
+    void mergeSortF(){
+        
     }
 
 
