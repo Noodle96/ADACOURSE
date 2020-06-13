@@ -1,5 +1,6 @@
 #include<climits>
 #include"myvector.h"
+#include"sumaMaxima.h"
 
  // 65536 3254217 of mergesort
 
@@ -156,23 +157,59 @@ int main(){
     /*
         PROBLEMAS TIPO DE LA SUMA MAXIMA.
     */
+    //VECTOR A;
+    // A.push_back(-1);A.push_back(6);
+    // A.push_back(3);A.push_back(-6);A.push_back(2);A.push_back(8);
+    // A.push_back(4);A.push_back(-5);A.push_back(4);A.push_back(-3);A.push_back(4);
+    // A.push_back(4);A.push_back(-4);A.push_back(4);A.push_back(-5);
+    //A.push_back(-3);A.push_back(-4);A.push_back(-5);
+
+
+    // for(auto it = A.begin() ; it != A.end(); it++){
+    //     std::cout << *it << " " ;
+    // }std::cout<< std::endl;
+
+    // DATA data = SEG_MAX_LIN(A,A.size());
+    // std::cout << "e: " << data.first.first << " d: " << data.first.second
+    //  << " sumamax: " << data.second << std::endl;
+
+
+
+
+    //PROBLEMA PROPUESTO
+    // https://docs.google.com/document/d/1QA1RtGvqQBLpEdx876lUlgtE-K9mvpy7PIOMcHre-xQ/edit
+
+    std::cout << "Indique la cantidad de rutas: ";
+    unsigned long rutas,calles; std::cin>>rutas;
+    if(rutas > 0){
+        for(auto e = 1 ; e <= rutas ; e++){
+            std::cout << "# Calles de la ruta #" << e << " : "; std::cin>>calles;
+            VECTOR A;
+            for(auto i = 1 ; i <= calles-1; i++){
+                long temp;
+                std::cout <<"Ruta #"<<e<< " Costo de ir calle #" << i << " a la calle #" << i+1 << " : ";std::cin>>temp;A.push_back(temp);
+            }
+            DATA data = SEG_MAX_LIN(A,A.size());
+            L_L E = data.first.first;
+            L_L d = data.first.second;
+            L_L sumamax = data.second;
+            if(sumamax == 0 ){
+                std::cout << "La Ruta #" << e << " no tiene  calles interesantes" << std::endl;
+            }else{
+                std::cout << "La mejor parte de la Ruta #" << e << " es entre la Calle #" << E+1 << " y la Calle #" << d+2 << std::endl;
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+
+
 
     return 0;
 }
-
-
-// 2 0
-// 4 1
-// 8 5
-// 16 12
-// 32 26
-// 64 67
-// 128 179
-// 256 356
-// 512 463
-// 1024 1070
-// 2048 3712
-// 4096 13679
-// 8192 52392
-// 16384 201886
-// 32768 793023
