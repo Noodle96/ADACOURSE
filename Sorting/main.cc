@@ -1,6 +1,8 @@
 #include<climits>
 #include"myvector.h"
 
+ // 65536 3254217 of mergesort
+
 int main(){
     //int tam; std::cin>>tam;
 
@@ -23,9 +25,9 @@ int main(){
     /*
         INSERT SORT
     */
-    // std::ofstream dataInsertSort;
-    // dataInsertSort.open("dataInsertSort.txt",std::ios::app);
-    // for(auto n = 2; n < 33000 ; n *=2 ){
+    // std::ofstream dataInsertSortTest1;
+    // dataInsertSortTest1.open("dataInsertSort0-1000.txt",std::ios::app);
+    // for(auto n = 2; n < 1001 ; n +=50){ // for(n=2; n<=33000 ; n*=2)
     //     auto promedioX = 0;
     //     //SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
     //     for (int e = 0 ; e < 50 ; e++){
@@ -35,11 +37,11 @@ int main(){
     //         std::cout << promedioX << std::endl;
     //     }
     //     promedioX /=50;
-    //     dataInsertSort << n << " " << promedioX << std::endl;
+    //     dataInsertSortTest1 << n << " " << promedioX << std::endl;
     //
     // }
-    // dataInsertSort.close();
-
+    // dataInsertSortTest1.close();
+    //
 
 
 
@@ -112,10 +114,65 @@ int main(){
     /*
         MERGE SORT
     */
-    MyVector<int> vec(5);
-    vec.mergeSortF();
+    //test
+    // MyVector<int> vec(100);
+    // vec.printVector();
+    // vec.mergeSortF();
+    // vec.printVector();
+    //#
+    //#
+    //#
+    //#
+    // std::ofstream dataMergeSort;
+    // dataMergeSort.open("dataMergeSort0-1000.txt" , std::ios::app);
+    // for(auto n = 2; n < 1050 ; n *=2 ) { // for(auto n = 2; n < 66000 ; n *=2 )
+    //     auto promedioX = 0;
+    //     //SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
+    //     for (int e = 0 ; e < 50 ; e++){
+    //         MyVector<int> vec(n);
+    //         auto duration = vec.mergeSortF();
+    //         promedioX  += duration.count();
+    //         //std::cout << duration.count() << std::endl;
+    //         std::cout << promedioX << std::endl;
+    //     }
+    //     promedioX /=50;
+    //     dataMergeSort << n << " " << promedioX << std::endl;
+    //
+    // }
+    // dataMergeSort.close();
+    //#
+    //#
+    // MyVector<int> v(12);
+    // auto duration = v.mergeSortF();
+    // std::cout << duration.count() << std::endl;
 
 
+
+
+
+
+
+
+    /*
+        PROBLEMAS TIPO DE LA SUMA MAXIMA.
+    */
 
     return 0;
 }
+
+
+// 2 0
+// 4 1
+// 8 5
+// 16 12
+// 32 26
+// 64 67
+// 128 179
+// 256 356
+// 512 463
+// 1024 1070
+// 2048 3712
+// 4096 13679
+// 8192 52392
+// 16384 201886
+// 32768 793023

@@ -4,13 +4,15 @@
 
 //ALGORITMO DE INTERCALACION
 template<typename T>
-void intercalacion(std::vector<T>&A,unsigned p, unsigned q, unsigned r){
+void intercalacion(std::vector<T>&A,long p, long q, long r){
+    //std::cout << "funcion Intercalacion" << std::endl;
     //vector auxiliar B
-    std::vector<T> B;
+    // std::vector<T> B;
+    std::vector<T> B(r,-1);
     //fill with -1
-    for(auto e = 0 ;e<=r; e++){
-        B.push_back(-1);
-    }
+    // for(auto e = 0 ;e<=r; e++){
+    //     B.push_back(-1);
+    // }
 
     //insertaremos en B desde p hasta q.
     for(auto i = p ; i<=q;i++){
@@ -35,10 +37,12 @@ void intercalacion(std::vector<T>&A,unsigned p, unsigned q, unsigned r){
 
 
 template<typename T>
-void mergeSort(std::vector<T> &A, unsigned p, unsigned r){
+void mergeSort(std::vector<T> &A, long p, long r){
+    //std::cout << "FuncionMerge " << "p: " << p  <<" r " << r << std::endl;
     if(p<r){
-        unsigned q = (p+r)/2;
-        mergeSort(A,p,q-1);
+        long q = (p+r)/2;
+        //std::cout << "  q: " << q <<  std::endl;
+        mergeSort(A,p,q);
         mergeSort(A,q+1,r);
         intercalacion(A,p,q,r);
     }

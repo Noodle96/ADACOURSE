@@ -82,8 +82,12 @@ public:
         return duration;
     }
 
-    void mergeSortF(){
-        
+    auto mergeSortF(){
+        auto start = high_resolution_clock::now();
+        mergeSort(myvector,0,this->lengthVector-1);
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        return duration;
     }
 
 
