@@ -3,6 +3,8 @@
 #include"sumaMaxima.h"
 
  // 65536 3254217 of mergesort
+ // bool myfunction (int i,int j) { return (i<j); }
+
 
 int main(){
     //int tam; std::cin>>tam;
@@ -179,31 +181,54 @@ int main(){
     //PROBLEMA PROPUESTO
     // https://docs.google.com/document/d/1QA1RtGvqQBLpEdx876lUlgtE-K9mvpy7PIOMcHre-xQ/edit
 
-    std::cout << "Indique la cantidad de rutas: ";
-    unsigned long rutas,calles; std::cin>>rutas;
-    if(rutas > 0){
-        for(auto e = 1 ; e <= rutas ; e++){
-            std::cout << "# Calles de la ruta #" << e << " : "; std::cin>>calles;
-            VECTOR A;
-            for(auto i = 1 ; i <= calles-1; i++){
-                long temp;
-                std::cout <<"Ruta #"<<e<< " Costo de ir calle #" << i << " a la calle #" << i+1 << " : ";std::cin>>temp;A.push_back(temp);
-            }
-            DATA data = SEG_MAX_LIN(A,A.size());
-            L_L E = data.first.first;
-            L_L d = data.first.second;
-            L_L sumamax = data.second;
-            if(sumamax == 0 ){
-                std::cout << "La Ruta #" << e << " no tiene  calles interesantes" << std::endl;
-            }else{
-                std::cout << "La mejor parte de la Ruta #" << e << " es entre la Calle #" << E+1 << " y la Calle #" << d+2 << std::endl;
-            }
+    // std::cout << "Indique la cantidad de rutas: ";
+    // unsigned long rutas,calles; std::cin>>rutas;
+    // if(rutas > 0){
+    //     for(auto e = 1 ; e <= rutas ; e++){
+    //         std::cout << "# Calles de la ruta #" << e << " : "; std::cin>>calles;
+    //         VECTOR A;
+    //         for(auto i = 1 ; i <= calles-1; i++){
+    //             long temp;
+    //             std::cout <<"Ruta #"<<e<< " Costo de ir calle #" << i << " a la calle #" << i+1 << " : ";std::cin>>temp;A.push_back(temp);
+    //         }
+    //         DATA data = SEG_MAX_LIN(A,A.size());
+    //         L_L E = data.first.first;
+    //         L_L d = data.first.second;
+    //         L_L sumamax = data.second;
+    //         if(sumamax == 0 ){
+    //             std::cout << "La Ruta #" << e << " no tiene  calles interesantes" << std::endl;
+    //         }else{
+    //             std::cout << "La mejor parte de la Ruta #" << e << " es entre la Calle #" << E+1 << " y la Calle #" << d+2 << std::endl;
+    //         }
+    //
+    //     }
+    // }
 
-        }
-    }
+
+
+    // std::vector<int> c(10);c.push_back(7);c.push_back(2);c.push_back(11);
+    // for(auto it = c.begin() ;it != c.end() ; it++){
+    //     std::cout << *it << " ";
+    // }std::cout << std::endl;
+    // std::sort(c.begin(),c.end(),myfunction);
+    // for(auto it = c.begin() ;it != c.end() ; it++){
+    //     std::cout << *it << " ";
+    // }std::cout << std::endl;
 
 
 
+
+
+
+
+
+    /*
+        QUICKSORT
+    */
+    // MyVector<int> vec(10);
+    // vec.printVector();
+    // vec.quickSortF();
+    // vec.printVector();
 
 
 

@@ -17,7 +17,7 @@
 #include<fstream>
 #include<chrono>
 #include<vector>    //vector
-#include <algorithm>    // std::swap
+#include <algorithm>    // std::swap and sort
 
 using namespace std::chrono;
 
@@ -29,6 +29,16 @@ using namespace std::chrono;
  // using  MS = std::chrono::microseconds;
 
  // using L = int;
+
+
+
+ // bool myfunction (int i,int j) { return (i<j); }
+
+int compare (const void * a, const void * b){
+  return ( *(int*)a - *(int*)b );
+}
+
+
 
 template<typename T>
 class MyVector{
@@ -85,6 +95,17 @@ public:
     auto mergeSortF(){
         auto start = high_resolution_clock::now();
         mergeSort(myvector,0,this->lengthVector-1);
+        auto stop = high_resolution_clock::now();
+        auto duration = duration_cast<microseconds>(stop - start);
+        return duration;
+    }
+    //
+    // bool myfunction (int i,int j) { return (i<j); }
+
+    auto quickSortF(){
+        auto start = high_resolution_clock::now();
+        //std::sort(myvector.begin(), myvector.end(),myfunction);
+        qsort((void*)&myvector[0],this->lengthVector,sizeof(int),compare);
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop - start);
         return duration;
