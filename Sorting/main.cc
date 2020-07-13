@@ -6,6 +6,12 @@
  // bool myfunction (int i,int j) { return (i<j); }
 
 
+
+
+
+
+
+
 int main(){
     //int tam; std::cin>>tam;
 
@@ -127,10 +133,10 @@ int main(){
     //#
     //#
     // std::ofstream dataMergeSort;
-    // dataMergeSort.open("dataMergeSort0-1000.txt" , std::ios::app);
-    // for(auto n = 2; n < 1050 ; n *=2 ) { // for(auto n = 2; n < 66000 ; n *=2 )
+    // dataMergeSort.open("dataMergeSort0-100000.txt" , std::ios::app);
+    // for(auto n = 2; n < 133000 ; n *=2 ) { // for(auto n = 2; n < 66000 ; n *=2 )
     //     auto promedioX = 0;
-    //     //SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
+    //     // SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
     //     for (int e = 0 ; e < 50 ; e++){
     //         MyVector<int> vec(n);
     //         auto duration = vec.mergeSortF();
@@ -140,6 +146,7 @@ int main(){
     //     }
     //     promedioX /=50;
     //     dataMergeSort << n << " " << promedioX << std::endl;
+    //
     //
     // }
     // dataMergeSort.close();
@@ -230,6 +237,38 @@ int main(){
     // vec.quickSortF();
     // vec.printVector();
 
+    // std::ofstream dataquickSort;
+    // dataquickSort.open("dataQuickSort.txt" , std::ios::app);
+    // for(auto n = 2; n <135000 ; n *=2 ) { // for(auto n = 2; n < 66000 ; n *=2 )
+    //     auto promedioX = 0;
+    //     //SE HARA UNA PRUEBA DE 50 VECES CON LA MISMA CUANTIDAD DE ELEMENTOS PARA PODER HALLAR UN PROMEDIO
+    //     for (int e = 0 ; e < 50 ; e++){
+    //         MyVector<int> vec(n);
+    //         auto duration = vec.quickSortF();
+    //         promedioX  += duration.count();
+    //         //std::cout << duration.count() << std::endl;
+    //         //std::cout << promedioX << std::endl;
+    //     }
+    //     promedioX /=50;
+    //     dataquickSort << n << " " << promedioX << std::endl;
+    //
+    // }
+    // dataquickSort.close();
+
+    // MyVector<int> vec(131072);
+    // // vec.printVector();
+    // auto duration = vec.quickSortF().count();
+    // // vec.printVector();
+    // std::cout << duration<< std::endl;
+
+
+
+
+
+
+    /*
+        PROBLEMA DEL PROMEDIO MAXIMO
+    */
 
 
 

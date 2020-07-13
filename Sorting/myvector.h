@@ -42,7 +42,7 @@ int compare (const void * a, const void * b){
 
 template<typename T>
 class MyVector{
-private:
+public:
     std::vector<T> myvector;
     long lengthVector;
 public:
@@ -104,7 +104,7 @@ public:
 
     auto quickSortF(){
         auto start = high_resolution_clock::now();
-        //std::sort(myvector.begin(), myvector.end(),myfunction);
+        // std::sort(myvector.begin(), myvector.end(),myfunction);
         qsort((void*)&myvector[0],this->lengthVector,sizeof(int),compare);
         auto stop = high_resolution_clock::now();
         auto duration = duration_cast<microseconds>(stop - start);
