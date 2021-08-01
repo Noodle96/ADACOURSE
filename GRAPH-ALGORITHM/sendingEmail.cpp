@@ -47,9 +47,11 @@ int main(){
             cin >> origen >> destino >> w;
             //bidireccional
             M.addEdge(origen,destino,w);
-            M.addEdge(destino,origen,w);
+            //M.addEdge(destino,origen,w);
         }
-        int sh = M.shortestPath(S,T);
+        //int sh = M.shortestPath(S,T);
+        vector<int> vecDistances = M.shortestPath(S);
+        int sh = vecDistances[T];
         if(sh !=  INF) cout << "Case #" << e+1 <<": " << sh <<endl;
         else cout << "Case #" << e+1 <<": unreachable"  <<endl;
     }

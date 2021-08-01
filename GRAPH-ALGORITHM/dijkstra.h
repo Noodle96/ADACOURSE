@@ -20,7 +20,7 @@ public:
 	void addEdge(int u, int v, int w);
 
 	// prints shortest path from s
-	int shortestPath(int s, int T);
+	vector<int> shortestPath(int s);
 };
 
 // Allocates memory for adjacency list
@@ -33,11 +33,11 @@ Graph::Graph(int V)
 void Graph::addEdge(int u, int v, int w)
 {
 	adj[u].push_back(make_pair(v, w));
-	adj[v].push_back(make_pair(u, w));
+	//adj[v].push_back(make_pair(u, w));
 }
 
 // Prints shortest paths from src to all other vertices
-int Graph::shortestPath(int src, int T)
+vector<int> Graph::shortestPath(int src)
 {
 	// Create a priority queue to store vertices that
 	// are being preprocessed. This is weird syntax in C++.
@@ -91,7 +91,8 @@ int Graph::shortestPath(int src, int T)
 	//for (int i = 0; i < V; ++i)
 	//	printf("%d \t\t %d\n", i, dist[i]);
 
-    return dist[T];
+    //return dist[T];
+    return dist;
 }
 
 
